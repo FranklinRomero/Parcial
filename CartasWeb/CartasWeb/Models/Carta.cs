@@ -9,6 +9,8 @@ namespace CartasWeb.Models
     public class Carta
     {
         [Key]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "{0} es requerido")]
+        [StringLength(1, MinimumLength = 1, ErrorMessage = "La longitud de {0} debe estar entre {2} y {1}")]
         public string NaipeId { get; set; }
 
 
